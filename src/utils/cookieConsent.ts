@@ -13,7 +13,7 @@ export function setConsent(value: ConsentValue) {
 }
 
 function loadGoogleAnalytics() {
-  if (!GA_ID || window.gtag) return
+  if (!GA_ID || typeof window.gtag !== "undefined") return
 
   const script = document.createElement("script")
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`

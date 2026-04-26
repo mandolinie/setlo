@@ -17,12 +17,11 @@ export default function CookieBanner() {
   return (
     <div className="dialogbg">
       <Card className="w-full max-w-sm text-center">
-        <div className="text-lg font-semibold">Cookie notice</div>
         <p>
-          This app collects anonymized usage data via Google Analytics.{" "}
+          This app collects anonymized usage data via Google Analytics.{" "} Read more under
           <Link to="/privacy" className="underline text-mist-50 hover:text-green-400 normal-case">
-            Privacy policy
-          </Link>
+            privacy
+          </Link>.
         </p>
 
         <div className="flex gap-3 mt-4">
