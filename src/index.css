@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    @apply bg-mist-950 text-mist-50;
+  }
+
+  body {
+    @apply min-h-screen mx-auto;
+    font-family: "Space Grotesk", sans-serif;
+    text-transform: uppercase;
+  }
+
+  *:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px rgb(34 197 94);
+  }
+
+  input:focus-visible {
+    outline: none;
+    box-shadow: 0px 2px 0 rgb(34 197 94);
+  }
+
+  main {
+    @apply flex flex-col p-4 gap-4 sm:p-8;
+  }
+
+  h1 {
+    @apply font-semibold text-2xl text-mist-300;
+  }
+
+  h2 {
+    @apply font-semibold text-xl text-mist-300;
+  }
+
+  h3, h4 {
+    @apply font-medium text-lg text-mist-300;
+  }
+
+  h5 {
+    @apply font-medium text-sm text-mist-300;
+  }
+
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {
+    @apply -mt-2;
+  }
+
+  p, li {
+    @apply font-light text-sm text-mist-400 normal-case;
+  }
+
+  ul li {
+    @apply ml-4 list-disc;
+  }
+
+  ol li {
+    @apply ml-4 list-decimal;
+  }
+
+  p a {
+    @apply underline text-mist-50 hover:text-green-400;
+  }
+
+}
+
+@layer components {
+  .mainbg {
+    @apply min-h-screen max-w-2xl mx-auto bg-mist-900 text-mist-50 flex flex-col;
+  }
+
+  .contentbg {
+    @apply flex flex-col p-4 gap-3;
+  }
+
+  .modalbg {
+    @apply max-w-2xl mx-auto fixed inset-0 bg-mist-800 text-mist-50 flex flex-col z-20;
+    animation: modal-slide-in 200ms ease-out;
+  }
+
+  @keyframes modal-slide-in {
+    from {
+      transform: translateX(100%);
+      opacity: 0.75;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .dialogbg {
+    @apply max-w-2xl mx-auto fixed inset-0 bg-mist-950/70 flex items-center justify-center p-4 z-30;
+  }
+
+  .interactive {
+    @apply relative overflow-hidden transition-colors duration-100 
+          hover:brightness-110 
+          hover:text-mist-50 
+          hover:cursor-pointer;
+  }
+
+  .interactive:active {
+    @apply scale-95;
+  }
+
+  .interactive::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    transition: opacity 100ms ease;
+    pointer-events: none;
+  }
+
+  .interactive:hover::after {
+    opacity: 0.1;
+  }
+
+  .smalltext {
+    @apply font-medium text-sm text-mist-400
+  }
+
+}

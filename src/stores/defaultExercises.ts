@@ -1,0 +1,110 @@
+import type { Exercise } from "../types/exercise"
+import type { Routine } from "../types/routine"
+
+export const defaultRoutines: Routine[] = [
+  {
+    id: "arms",
+    name: "Arms",
+    order: 0,
+  },
+  {
+    id: "legs",
+    name: "Legs",
+    order: 1,
+  },
+]
+
+export const defaultExercises: Partial<Exercise>[] = [
+  // Arms
+  {
+    id: "chin-ups",
+    name: "Chin-Ups",
+    type: "reps",
+    minReps: 4,
+    maxReps: 8,
+    totalSets: 4,
+    order: 0,
+    routineIds: ["arms"],
+  },
+  {
+    id: "sz-curls",
+    name: "SZ-Curls",
+    type: "reps",
+    minReps: 8,
+    maxReps: 12,
+    totalSets: 4,
+    order: 1,
+    routineIds: ["arms"],
+  },
+  {
+    id: "parallettes-dips",
+    name: "Parallettes Dips",
+    type: "reps",
+    minReps: 12,
+    maxReps: 15,
+    totalSets: 4,
+    order: 2,
+    routineIds: ["arms"],
+  },
+  {
+    id: "diamond-push-ups",
+    name: "Diamond Push-Ups",
+    type: "reps",
+    minReps: 12,
+    maxReps: 15,
+    totalSets: 3,
+    order: 3,
+    routineIds: ["arms"],
+  },
+  {
+    id: "overhead-triceps",
+    name: "Overhead Triceps",
+    type: "reps",
+    minReps: 8,
+    maxReps: 12,
+    totalSets: 3,
+    order: 4,
+    routineIds: ["arms"],
+  },
+  // Legs
+  {
+    id: "bulgarian-split-squats",
+    name: "Bulgarian Split Squats",
+    type: "reps",
+    minReps: 8,
+    maxReps: 12,
+    totalSets: 3,
+    order: 5,
+    routineIds: ["legs"],
+  },
+  {
+    id: "romanian-deadlift",
+    name: "Romanian Deadlift",
+    type: "reps",
+    minReps: 8,
+    maxReps: 12,
+    totalSets: 4,
+    order: 6,
+    routineIds: ["legs"],
+  },
+  {
+    id: "hip-thrust",
+    name: "Hip Thrust",
+    type: "reps",
+    minReps: 15,
+    maxReps: 20,
+    totalSets: 3,
+    order: 7,
+    routineIds: ["legs"],
+  },
+  {
+    id: "calf-raises",
+    name: "Calf Raises",
+    type: "reps",
+    minReps: 15,
+    maxReps: 20,
+    totalSets: 4,
+    order: 8,
+    routineIds: ["legs"],
+  },
+]
