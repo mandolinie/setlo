@@ -19,7 +19,7 @@ export default function CookieBanner() {
       <Card className="w-full max-w-sm text-center">
         <div className="text-lg font-semibold">Cookies</div>
         <p>
-          This app collects anonymized usage data via Google Analytics.{" "} Read more under 
+          This app collects anonymized usage data via Google Analytics. Read more under{" "}
           <Link to="/privacy" className="underline text-mist-50 hover:text-green-400 normal-case">
             privacy
           </Link>.
