@@ -1,5 +1,6 @@
 import AppLayout from "../components/layout/AppLayout"
 import Footer from "../components/layout/Footer"
+import { IconExternalLink } from "@tabler/icons-react"
 
 export default function LegalPage() {
   return (
@@ -8,7 +9,12 @@ export default function LegalPage() {
       <main>
         <h1>Legal notice</h1>
         <h3>Responsible for contents according to § 55 paragraph 2 RStV</h3>
-        <p>Manuel Blex<br />Implerstr. 58<br />81371 Munich<br />Germany</p>
+        <p>
+          Manuel Blex<br />Implerstr. 58<br />81371 Munich<br />Germany<br />
+          <a href="https://mandolinie.github.io" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">
+            mandolinie.github.io <IconExternalLink size={12} aria-hidden="true" />
+          </a>
+        </p>
         <h3>Limitation of liability for internal content</h3>
         <p>The content of our website has been compiled with meticulous care and to the best of our knowledge. However, we cannot assume any liability for the up-to-dateness, completeness or accuracy of any of the pages.</p>
         <p>Pursuant to section 7, para. 1 of the TMG (Telemediengesetz – Tele Media Act by German law), we as service providers are liable for our own content on these pages in accordance with general laws. However, pursuant to sections 8 to 10 of the TMG, we as service providers are not under obligation to monitor external information provided or stored on our website. Once we have become aware of a specific infringement of the law, we will immediately remove the content in question. Any liability concerning this matter can only be assumed from the point in time at which the infringement becomes known to us.</p>
