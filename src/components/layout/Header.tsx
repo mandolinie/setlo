@@ -3,6 +3,7 @@ import {
   IconBarbellFilled,
   IconListCheckFilled,
   IconMenu2,
+  IconRun,
   IconFileText,
   IconShield,
   IconX,
@@ -19,6 +20,7 @@ export default function Header() {
 
   const isWorkout = pathname === "/workout"
   const isRoutine = pathname === "/routine"
+  const isHistory = pathname === "/history"
   const isLegal = pathname === "/legal"
   const isPrivacy = pathname === "/privacy"
 
@@ -77,6 +79,14 @@ export default function Header() {
       >
         {open && (
           <div className="flex flex-col bg-mist-950">
+
+            <NavItem
+              to="/history"
+              label="History"
+              icon={<IconRun size={16} />}
+              active={isHistory}
+              onClick={() => setOpen(false)}
+            />
 
             <NavItem
               to="/legal"

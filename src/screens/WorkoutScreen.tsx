@@ -17,6 +17,7 @@ import {
 // 2. State / hooks (app logic)
 import { useSessionStore } from "../stores/sessionStore"
 import { useExerciseStore, ALL_ROUTINE_ID } from "../stores/exerciseStore"
+import { useHistoryStore } from "../stores/historyStore"
 
 // 3. Utilities
 import { formatExerciseTime, formatReps } from "../utils/format"
@@ -69,6 +70,8 @@ export default function WorkoutScreen() {
 
   const allExercises = useExerciseStore((s) => s.exercises)
   const activeRoutineId = useExerciseStore((s) => s.activeRoutineId)
+  const routines = useExerciseStore((s) => s.routines)
+  const addLog = useHistoryStore((s) => s.addLog)
   const activeRoutineExercises = (
     activeRoutineId === ALL_ROUTINE_ID
       ? allExercises
@@ -103,6 +106,20 @@ export default function WorkoutScreen() {
   )
   const progress = totalSets === 0 ? 0 : completedSets / totalSets
 
+  const logAndFinish = () => {
+    const routineName =
+      activeRoutineId === ALL_ROUTINE_ID
+        ? "All"
+        : (routines.find((r) => r.id === activeRoutineId)?.name ?? "Workout")
+    addLog({
+      date: new Date().toISOString().slice(0, 10),
+      routineName,
+      completedSets: exercises.reduce((sum, e) => sum + (setCounts[e.id] ?? 0), 0),
+      plannedSets: exercises.reduce((sum, e) => sum + e.totalSets, 0),
+    })
+    resetWorkout()
+  }
+
   return (
     <AppLayout
       footer={
@@ -117,9 +134,14 @@ export default function WorkoutScreen() {
               Start workout
             </PillButton>
           ) : (
-            <PillButton onClick={resetWorkout} fullWidth variant="error">
-              Reset workout
-            </PillButton>
+            <div className="flex gap-3">
+              <PillButton onClick={resetWorkout} fullWidth>
+                Discard
+              </PillButton>
+              <PillButton onClick={logAndFinish} fullWidth variant="success">
+                Log & finish
+              </PillButton>
+            </div>
           )}
         </Footer>
       }

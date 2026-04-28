@@ -33,9 +33,9 @@ export default function InfoBanner({
   return (
     <div
       role="status"
-      className={`flex items-start gap-2 rounded-md border py-2 px-3 text-sm ${variantStyles[variant]}`}
+      className={`flex items-center gap-2 rounded-md border py-2 px-3 text-sm ${variantStyles[variant]}`}
     >
-      <div className="h-full flex items-center">{variantIcons[variant]}</div>
+      <div className="shrink-0">{variantIcons[variant]}</div>
       <div>{children}</div>
     </div>
   )
