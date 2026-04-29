@@ -58,7 +58,7 @@ function getBanner(days: number | null): BannerConfig {
 
 export default function HistoryScreen() {
   const { logs, addLog, deleteLog } = useHistoryStore()
-  const { routines, exercises } = useExerciseStore()
+  const { routines } = useExerciseStore()
 
   // Sort newest first regardless of insertion order
   const sortedLogs = [...logs].sort((a, b) => b.date.localeCompare(a.date))
@@ -81,16 +81,9 @@ export default function HistoryScreen() {
     const routine = routines.find((r) => r.id === addRoutineId)
     if (!routine) return
 
-    const routineExercises = exercises.filter((e) =>
-      e.routineIds.includes(addRoutineId)
-    )
-    const plannedSets = routineExercises.reduce((sum, e) => sum + e.totalSets, 0)
-
     addLog({
       date: addDate,
       routineName: routine.name,
-      completedSets: plannedSets,
-      plannedSets,
     })
     setShowAdd(false)
   }
@@ -126,10 +119,7 @@ export default function HistoryScreen() {
 
                 <div className="flex items-center gap-4">
                   <span className="text-base font-medium text-mist-400 uppercase">
-                    {log.routineName}{" "}
-                    <span className="tabular-nums">
-                      {log.completedSets}/{log.plannedSets}
-                    </span>
+                    {log.routineName}
                   </span>
 
                   <IconButton

@@ -8,8 +8,6 @@ export type WorkoutLog = {
   id: string
   date: string           // ISO date string, e.g. "2026-04-28"
   routineName: string
-  completedSets: number  // actual sets done, may exceed plannedSets if user overshoots
-  plannedSets: number
 }
 
 type HistoryState = {

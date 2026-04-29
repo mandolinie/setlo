@@ -114,8 +114,6 @@ export default function WorkoutScreen() {
     addLog({
       date: new Date().toISOString().slice(0, 10),
       routineName,
-      completedSets: exercises.reduce((sum, e) => sum + (setCounts[e.id] ?? 0), 0),
-      plannedSets: exercises.reduce((sum, e) => sum + e.totalSets, 0),
     })
     resetWorkout()
   }
