@@ -38,6 +38,7 @@ export default function AboutPage() {
             <li>Assign exercises to one or more routines</li>
             <li>Go to Workout, pick a routine, and start your session</li>
             <li>Track your sets as you go</li>
+            <li>Tap Log & finish — your session is saved to History</li>
           </ol>
 
           <Divider className="my-2" />
@@ -53,6 +54,8 @@ export default function AboutPage() {
             <li>Reps-based or time-based exercises</li>
             <li>Built-in timer for sets and rest periods</li>
             <li>Progress bar to track completion within a workout</li>
+            <li>Workout history with sets completed per session</li>
+            <li>At-a-glance motivation based on days since last workout</li>
             <li>Works instantly — no login required</li>
           </ul>
 
@@ -84,8 +87,11 @@ export default function AboutPage() {
           <h5>Can an exercise belong to multiple routines?</h5>
           <p>Yes. When editing an exercise, use the "Included in" section to assign it to as many routines as you like.</p>
           <Divider className="my-2" />
-          <h5>Can I track weights or history?</h5>
+          <h5>Can I track weights?</h5>
           <p>Not currently. SETLO focuses on tracking sets and timing during your workout.</p>
+          <Divider className="my-2" />
+          <h5>How does workout history work?</h5>
+          <p>When you finish a workout, tap Log & finish. SETLO saves the date, routine, and sets completed. Your history is stored locally and never leaves your device.</p>
           <Divider className="my-2" />
           <h5>Is this meant to replace full fitness apps?</h5>
           <p>No. SETLO is designed as a lightweight tool for executing your workout, not managing your entire fitness life.</p>

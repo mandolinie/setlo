@@ -27,10 +27,7 @@ function loadGoogleAnalytics() {
   }
 
   window.gtag("js", new Date())
-  window.gtag("config", GA_ID, {
-    anonymize_ip: true,
-    cookie_domain: "mandolinie.github.io",
-  })
+  window.gtag("config", GA_ID, { anonymize_ip: true })
 }
 
 // Load GA immediately if already accepted (on app start)
