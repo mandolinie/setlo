@@ -25,7 +25,7 @@ export default function Footer({ children }: Props) {
       {showCopyright && (
         <div className="flex items-center justify-center gap-2 text-xs text-mist-400">
           <Logo size="sm" aria-hidden="true" />
-          <span>© {year} SETLO. All rights reserved.</span>
+          <span>© {year} SETLØ. All rights reserved.</span>
         </div>
       )}
     </footer>

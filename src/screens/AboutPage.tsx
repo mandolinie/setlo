@@ -19,12 +19,12 @@ export default function AboutPage() {
             variant="wordmark"
             size="md"
             role="img"
-            aria-label="SETLO"
+            aria-label="SETLØ"
             className="mb-2 text-mist-50"
           />
-          <p className="highlight">SETLO is a simple workout tracker built for focus.</p>
+          <p className="highlight">SETLØ is a simple workout tracker built for focus.</p>
           <p>Organise your exercises into routines, start your workout, and track your sets without distraction. No accounts, no setup, no unnecessary features.</p>
-          <p>SETLO is designed to be fast, clear, and ready when you are.</p>
+          <p>SETLØ is designed to be fast, clear, and ready when you are.</p>
         </Card>
 
         <Card variant="dark" className="text-left items-start p-6 border-mist-700 border">
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
           <div className="flex items-center gap-2">
             <IconStar size={20} aria-hidden="true" />
-            <h3>What SETLO offers</h3>
+            <h3>What SETLØ offers</h3>
           </div>
           <ul>
             <li>Organise exercises into multiple routines</li>
@@ -63,9 +63,9 @@ export default function AboutPage() {
 
           <div className="flex items-center gap-2">
             <IconFlag size={20} aria-hidden="true" />
-            <h3>Why SETLO is different</h3>
+            <h3>Why SETLØ is different</h3>
           </div>
-          <p>Most workout apps try to do everything. SETLO does one thing well: helping you execute your workout.</p>
+          <p>Most workout apps try to do everything. SETLØ does one thing well: helping you execute your workout.</p>
           <p>There is no onboarding, no profiles, and no data overload. You open the app and start training.</p>
           <p>The interface stays out of your way so you can stay focused on your sets.</p>
         </Card>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <h3>FAQ</h3>
           </div>
           <h5>Do I need an account?</h5>
-          <p>No. SETLO works immediately without sign-up.</p>
+          <p>No. SETLØ works immediately without sign-up.</p>
           <Divider className="my-2" />
           <h5>Is my data saved?</h5>
           <p>Your exercises and routines are stored locally on your device. There is no cloud sync.</p>
@@ -88,13 +88,13 @@ export default function AboutPage() {
           <p>Yes. When editing an exercise, use the "Included in" section to assign it to as many routines as you like.</p>
           <Divider className="my-2" />
           <h5>Can I track weights?</h5>
-          <p>Not currently. SETLO focuses on tracking sets and timing during your workout.</p>
+          <p>Not currently. SETLØ focuses on tracking sets and timing during your workout.</p>
           <Divider className="my-2" />
           <h5>How does workout history work?</h5>
-          <p>When you finish a workout, tap Log & finish. SETLO saves the date, routine, and sets completed. Your history is stored locally and never leaves your device.</p>
+          <p>When you finish a workout, tap Log & finish. SETLØ saves the date, routine, and sets completed. Your history is stored locally and never leaves your device.</p>
           <Divider className="my-2" />
           <h5>Is this meant to replace full fitness apps?</h5>
-          <p>No. SETLO is designed as a lightweight tool for executing your workout, not managing your entire fitness life.</p>
+          <p>No. SETLØ is designed as a lightweight tool for executing your workout, not managing your entire fitness life.</p>
           <Divider className="my-2" />
           <h5>Why is it so minimal?</h5>
           <p>Because fewer features mean less friction. The goal is to help you start and complete your workout without distractions.</p>
